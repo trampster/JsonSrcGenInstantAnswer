@@ -1,5 +1,5 @@
-﻿using JsonSrcGenInstantAnswer.ViewModels;
-using System.Windows;
+﻿using System.Windows;
+using StrongInject;
 
 namespace JsonSrcGenInstantAnswer
 {
@@ -12,8 +12,12 @@ namespace JsonSrcGenInstantAnswer
       {
          base.OnStartup(e);
 
-         MainWindow = new MainWindow(new SearchViewModel());
-         MainWindow.Show();
+         var container = new InstantAnswerContainer();
+         container.Run<MainWindow>(mainWindows =>
+         {
+            MainWindow = mainWindows;
+            MainWindow.Show();
+         });
       }
    }
 }
