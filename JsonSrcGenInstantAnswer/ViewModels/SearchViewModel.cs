@@ -25,7 +25,7 @@ namespace JsonSrcGenInstantAnswer.ViewModels
          if(SearchText.Length > 0)
          {
             SearchButtonForegroundColor = _whiteColorBrush;
-            SearchButtonBackgroundColor = _yellowColorBrush;
+            SearchButtonBackgroundColor = _greenColorBrush;
             return;
          }
          SearchButtonForegroundColor = _grayColorBrush;
@@ -34,7 +34,7 @@ namespace JsonSrcGenInstantAnswer.ViewModels
 
       static readonly SolidColorBrush _grayColorBrush = new SolidColorBrush(Colors.Gray);
       static readonly SolidColorBrush _transparentColorBrush = new SolidColorBrush(Colors.Transparent);
-      static readonly SolidColorBrush _yellowColorBrush = new SolidColorBrush(Color.FromRgb(0x63, 0xad, 0x5f));
+      static readonly SolidColorBrush _greenColorBrush = new SolidColorBrush(Color.FromRgb(0x63, 0xad, 0x5f));
       static readonly SolidColorBrush _whiteColorBrush = new SolidColorBrush(Colors.White);
 
       SolidColorBrush _searchButtonForegroundColor = _grayColorBrush;
