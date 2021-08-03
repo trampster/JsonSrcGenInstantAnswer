@@ -1,4 +1,6 @@
 ﻿using System.Windows;
+using Serilog;
+using Serilog.Sinks.File;
 using StrongInject;
 
 namespace JsonSrcGenInstantAnswer
@@ -13,11 +15,9 @@ namespace JsonSrcGenInstantAnswer
          base.OnStartup(e);
 
          var container = new InstantAnswerContainer();
-         container.Run<MainWindow>(mainWindows =>
-         {
-            MainWindow = mainWindows;
-            MainWindow.Show();
-         });
+         var mainWindows = container.Resolve<MainWindow>().Value;
+         MainWindow = mainWindows;
+         MainWindow.Show();
       }
    }
 }

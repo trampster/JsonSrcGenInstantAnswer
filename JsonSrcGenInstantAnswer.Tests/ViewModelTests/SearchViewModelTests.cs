@@ -3,11 +3,8 @@ using JsonSrcGenInstantAnswer.Services;
 using JsonSrcGenInstantAnswer.ViewModels;
 using Moq;
 using NUnit.Framework;
-using System.Collections.Generic;
-using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 
 namespace JsonSrcGenInstantAnswer.Tests.ViewModelTests
 {
