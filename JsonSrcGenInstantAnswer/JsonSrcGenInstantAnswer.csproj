@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="close.png" />
     <None Remove="search.png" />
   </ItemGroup>
 
@@ -20,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="close.png" />
     <Resource Include="search.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

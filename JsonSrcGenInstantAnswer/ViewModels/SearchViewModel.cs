@@ -32,7 +32,19 @@ namespace JsonSrcGenInstantAnswer.ViewModels
          set
          {
             SetProperty(ref _searchText, value);
+            HasSearchText = _searchText.Length > 0;
             UpdateImageColors();
+         }
+      }
+
+      
+      bool _hasSearchText = false;
+      public bool HasSearchText
+      {
+         get => _hasSearchText;
+         set
+         {
+            SetProperty(ref _hasSearchText, value);
          }
       }
 
@@ -75,6 +87,14 @@ namespace JsonSrcGenInstantAnswer.ViewModels
          }
          backingStore = value;
          PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+      }
+
+      public ICommand ClearText => new AsyncCommand(DoClearText);
+
+      Task DoClearText()
+      {
+         SearchText = "";
+         return Task.CompletedTask;
       }
 
       public ICommand Search => new AsyncCommand(DoSearch);

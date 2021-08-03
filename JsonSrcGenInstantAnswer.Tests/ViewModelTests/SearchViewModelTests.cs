@@ -135,9 +135,6 @@ namespace JsonSrcGenInstantAnswer.Tests.ViewModelTests
       }
 
 
-      ///////////////////
-
-
       [Test]
       public async Task Search_GotResult_AbstractUrlSet()
       {
@@ -224,6 +221,45 @@ namespace JsonSrcGenInstantAnswer.Tests.ViewModelTests
 
          // assert
          Assert.That(_searchViewModel.Image, Is.EqualTo(bitmap));
+      }
+
+      [Test]
+      public void HasSearchText_SearchEmpty_False()
+      {
+         // arrange
+         _searchViewModel.SearchText = "";
+
+         // act
+         var hasSearchText = _searchViewModel.HasSearchText;
+
+         // assert
+         Assert.That(hasSearchText, Is.False);
+      }
+
+      [Test]
+      public void HasSearchText_SearchHasText_True()
+      {
+         // arrange
+         _searchViewModel.SearchText = "a";
+
+         // act
+         var hasSearchText = _searchViewModel.HasSearchText;
+
+         // assert
+         Assert.That(hasSearchText, Is.True);
+      }
+
+      [Test]
+      public void ClearText_HasText_Cleared()
+      {
+         // arrange
+         _searchViewModel.SearchText = "my search";
+
+         // act
+         _searchViewModel.ClearText.Execute(null);
+
+         // assert
+         Assert.That(_searchViewModel.SearchText, Is.EqualTo(""));
       }
    }
 }
