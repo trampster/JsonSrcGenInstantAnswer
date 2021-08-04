@@ -1,4 +1,4 @@
-# JsonSrcGenInstantAnswer
+# JsonSrcGen Instant Answer
 WPF demo project for JsonSrcGen that uses DuckDuckGo's instant answer api.
 
 ## JsonSrcGen
