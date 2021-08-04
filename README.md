@@ -1,5 +1,5 @@
 # JsonSrcGenInstantAnswer
-Demo project for JsonSrcGen that uses DuckDuckGo's instant answer api.
+WPF demo project for JsonSrcGen that uses DuckDuckGo's instant answer api.
 
 ## JsonSrcGen
 JsonSrcGen is a Json Serailizer that uses c# source generators to generate optimized Json converters at compile time. https://github.com/trampster/JsonSrcGen
