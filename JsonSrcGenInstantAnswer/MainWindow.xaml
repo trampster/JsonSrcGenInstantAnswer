@@ -19,6 +19,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Border CornerRadius="5" BorderThickness="1" BorderBrush="Gray" Background="White" Grid.ColumnSpan="2" >
             <Border.Effect>
@@ -64,5 +65,18 @@
                 <TextBlock Text="{Binding AbstractSource}" />
             </Hyperlink>
         </TextBlock>
+
+        <Grid Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Source="duckduckgo.png" Width="32" Height="32" RenderOptions.BitmapScalingMode="HighQuality" VerticalAlignment="Center" />
+            <TextBlock Grid.Column="1" VerticalAlignment="Center" Margin="10,0,0,0" >           
+                <Hyperlink NavigateUri="https://duckduckgo.com/" RequestNavigate="Hyperlink_RequestNavigate">
+                    <TextBlock Text="Results from DuckDuckGo" />
+                </Hyperlink>
+            </TextBlock>
+        </Grid>
     </Grid>
 </Window>
